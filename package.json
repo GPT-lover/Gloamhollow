@@ -1,0 +1,16 @@
+{
+  "name": "gloamhollow",
+  "version": "1.0.0",
+  "description": "A 2-player co-op wave-survival action platformer for the browser, with a hand-drawn underground bug-kingdom look.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --max-old-space-size=256 server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
