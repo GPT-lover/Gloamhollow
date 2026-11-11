@@ -7,13 +7,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { WebSocketServer } from 'ws';
-import { World } from './shared/world.js';
-import { TICK_RATE, MAX_PLAYERS } from './shared/constants.js';
+import { World } from './public/shared/world.js';
+import { TICK_RATE, MAX_PLAYERS } from './public/shared/constants.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.PORT) || 3000;
 const MAX_ROOMS = Number(process.env.MAX_ROOMS) || 300;
-const ROOTS = { '/shared/': path.join(__dirname, 'shared'), '/': path.join(__dirname, 'public') };
+const ROOTS = { '/shared/': path.join(__dirname, 'public', 'shared'), '/': path.join(__dirname, 'public') };
 const MIME = {
   '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
   '.css': 'text/css; charset=utf-8', '.png': 'image/png', '.svg': 'image/svg+xml',
